@@ -1,0 +1,29 @@
+<p> </p>
+<div class=" float-left col-md-3 mb-2" *ngFor="let event of deviceData">
+  <div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title">{{event.name}}</h5>
+      <p class="card-text">{{event.description}}</p>
+      <a href="#" class="btn btn-success">Buy Tickets</a>
+    </div>
+    <div class="card-footer text-muted">
+      {{event.date | date:'shortDate'}}
+    </div>
+  </div>
+</div>
+
+<div class=" float-left col-md-3 mb-2">
+<div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title">Test Get Data </h5>
+      <p class="card-text"> Click to fetch data </p>
+      <a class="btn btn-dark text-light" (click)= "onSubmit()"> Get Data </a>
+    </div>
+    <div class="card-footer text-muted">
+      Date
+    </div>
+  </div>
+</div>
+
+
+ 
