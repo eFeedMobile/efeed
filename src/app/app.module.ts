@@ -6,19 +6,17 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { PageErrorComponent } from './page-error/page-error.component';
 import { FormsModule } from '@angular/forms';
-import { HomepageComponent } from './homepage/homepage.component';
 import { AuthGuard } from './auth.guard';
 import { LoginServicsService } from './login/login-servics.service';
 import { TokenInterceptorService } from './token-interceptor.service';
-import { HomepublicComponent } from './homepublic/homepublic.component';
+import { MpageComponent } from './mpage/mpage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     PageErrorComponent,
-    HomepageComponent,
-    HomepublicComponent
+    MpageComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +24,7 @@ import { HomepublicComponent } from './homepublic/homepublic.component';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [LoginServicsService, AuthGuard, HomepageComponent,{
+  providers: [LoginServicsService, AuthGuard, MpageComponent,{
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptorService,
     multi: true
